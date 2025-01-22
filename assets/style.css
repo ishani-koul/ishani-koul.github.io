@@ -1,0 +1,33 @@
+body {
+	--base-size: 24px;
+	--gutter: calc(3 *var(--base-size));
+	--color-primary: black;
+	--color-secondary: blue;
+	--color-background: bisque;
+}
+header {
+	background-color: var(--color-background);
+	margin-bottom: 1.5rem;
+	padding-block: calc(4*var(--base-size));
+}
+
+
+p,header {
+	color: black;
+	font-size: calc( 2*var(--base-size));
+	padding-inline: var(--gutter);
+}
+
+p {
+	color: blue;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+
+footer {
+	color: black;
+	padding-top: var(--base-size);
+	padding-bottom: calc(2*var(--base-size));
+}
