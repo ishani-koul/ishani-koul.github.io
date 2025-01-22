@@ -1,8 +1,8 @@
 body {
-	--base-size: 24px;
+	--base-size: 20px;
 	--gutter: calc(3 *var(--base-size));
 	--color-primary: black;
-	--color-secondary: blue;
+	--color-secondary: rgb(38, 106, 252);
 	--color-background: bisque;
 }
 header {
@@ -14,12 +14,16 @@ header {
 
 p,header {
 	color: black;
-	font-size: calc( 2*var(--base-size));
+	font-size: calc( 1.2*var(--base-size));
 	padding-inline: var(--gutter);
 }
 
+section {
+	block-size: 60vh;
+}
+
 p {
-	color: blue;
+	color: var(--color-secondary);
 }
 
 li {
@@ -27,6 +31,7 @@ li {
 }
 
 footer {
+	background-color: var(--color-background);
 	color: black;
 	padding-top: var(--base-size);
 	padding-bottom: calc(2*var(--base-size));
