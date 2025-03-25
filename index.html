@@ -4,6 +4,19 @@
 		<title> Ishani Koul - Typography and Interaction </title>
 		<link rel="stylesheet" href="assets/reset.css"> 
 		<link rel="stylesheet" href="assets/style.css"> 
+		<script>
+			(function(d) {
+			  var config = {
+				kitId: 'vey0tns',
+				scriptTimeout: 3000,
+				async: true
+			  },
+			  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		</script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap');
+		</style>
 	</head>
 	<body>
 		<header> 
@@ -14,20 +27,13 @@
 			<ul>
 				<li>
 					<a href="https://ishani-koul.github.io/manuscript/">
-						<p> Project 1 </p>
-						<p><em> Manuscript </em></p>
-					</a>
-				</li>
-				<li>
-					<a href="https://ishani-koul.github.io/spread/">
-						<p> Project 2 </p>
-						<p><em> Spread </em></p>
-					</a>
-				</li>
-				<li>
-					<a href="https://ishani-koul.github.io/binding/">
-						<p> Project 3 </p>
-						<p><em> Binding </em></p>
+						<article class="project">
+							<img src="assets/Mismatch.png">
+								<div>
+									<h3>MANUSCRIPT</h3>
+									<h2>Mismatch: How inclusion shapes design</h2>
+								</div>
+						</article>
 					</a>
 				</li>
 			</ul>

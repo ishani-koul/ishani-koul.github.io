@@ -1,38 +1,96 @@
-body {
+:root {
 	--base-size: 20px;
 	--gutter: calc(3 *var(--base-size));
-	--color-primary: black;
-	--color-secondary: rgb(38, 106, 252);
-	--color-background: bisque;
-}
-header {
-	background-color: var(--color-background);
-	margin-bottom: 1.5rem;
-	padding-block: calc(4*var(--base-size));
-	font-size: calc( 2.4*var(--base-size));
+	--color-bg: #f0f0f0;
+	--color-text: #1E1E1E;
+	--color-accent: #EDB525;
 }
 
-p,header,footer {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* .project {
+	display: flex;
+	align-items:flex-end;
+	gap: 40px;
+}
+
+.project img {
+	width: 600px;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.project div {
+	flex: 1;
+}
+
+h3 {
+	font-family: "felt-tip-woman", sans-serif;
+	color: var(--color-accent);
+	font-weight: 400;
+	font-style: normal;
+	font-size: calc(var(--base-size)*1.4);
+}
+
+h2 {
+	font-family: "Manrope", sans-serif;
+	font-weight: 200;
+	font-size: calc(var(--base-size)*1.6);
+} */
+
+.project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fffffd;
+	padding: 16px;
+	width: 300px;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+	transform: rotate(-10deg);
+	transition: transform 0.3s ease;
+	border-radius: 0.5rem;
+	/* border-radius: 10px; */
+	}
+
+.project:hover {
+	background: #EDB525;
+	transform: rotate(0deg);
+}
+
+.project img {
+	width: 100%;
+	height: 100%;
+}
+
+.project div {
+	text-align: center;
+	padding: 12px;
+}
+
+.project h3 {
+	margin: 5px 0;
+	font-family: "felt-tip-woman", sans-serif;
+	color: var(--color-accent);
+	font-weight: 400;
+	font-style: normal;
+	font-size: calc(var(--base-size)*1.2);
+}
+  
+  .project h2 {
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
+  .project-links a {
+	text-decoration: none;
+	font-size: 18px;
 	color: black;
-	padding-inline: var(--gutter);
-}
+	font-weight: bold;
+  }
+  
 
-section {
-	block-size: 53vh;
-	font-size: calc( 1.2*var(--base-size));
-}
 
-p {
-	color: var(--color-secondary);
-}
-
-li {
-	margin-bottom: 1rem;
-}
-
-footer {
-	background-color: var(--color-background);
-	color: black;
-	padding-top: var(--base-size);
-	padding-bottom: calc(2*var(--base-size));
-}
