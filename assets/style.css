@@ -1,10 +1,10 @@
 :root {
 	--base-size: 20px;
-	--gutter: calc(3 *var(--base-size));
+	--gutter: calc(3 * var(--base-size));
 	--color-bg: #f0f0f0;
 	--color-text: #1E1E1E;
 	--color-accent: #EDB525;
-	--font-family: "Poppins";
+	--font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -15,32 +15,29 @@ body {
 }
 
 header {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 3rem 2rem 2rem;
-	flex-wrap: wrap;
-}
-
-header h1 {
-	font-size: 1.2rem;
-	font-weight: 400;
-	margin: 0;
-	order: 2;
+	padding: 4rem 2rem 2rem;
 }
 
 header h2 {
-	font-size: 1.2rem;
-	font-weight: 400;
-	margin: 0;
+	font-size: 1.4rem;
+	font-weight: 500;
 	color: var(--color-bg);
-	order: 1;
+	margin: 0 0 1rem 0;
+}
+
+header p {
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--color-bg);
+	max-width: 600px;
+	margin: 0;
+	line-height: 1.6;
 }
 
 section {
-	max-width: 1200px;
+	max-width: ;
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 1rem 2rem;
 }
 
 ul {
@@ -52,44 +49,67 @@ ul {
 li {
 	border-bottom: 1px solid #444;
 	padding: 1.5rem 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-  }
-  
-  a {
+}
+
+a {
 	text-decoration: none;
 	color: inherit;
+	display: block;
 	width: 100%;
-  }
-  
-  .project {
+}
+
+.project {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-  }
-  
-  .project h3 {
+}
+
+.project h3 {
+	font-size: 1rem;
+	font-weight: 200;
+	margin: 0;
+	color: var(--color-accent);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.project h2 {
 	font-size: 1rem;
 	font-weight: 500;
 	margin: 0;
-	color: #edb525;
-  }
-  
-  .project h2 {
-	font-size: 1rem;
-	font-weight: 500;
-	margin: 0;
-	color: white;
+	color: var(--color-bg);
 	text-align: right;
-  }
-  
-  footer {
-	text-align: center;
-	padding: 3rem 1rem 2rem;
-	font-size: 0.8rem;
-	color: #888;
-  }
-  
+}
+
+footer {
+	text-align: left;
+	padding: 4rem 2rem 2rem;
+	font-size: 0.9rem;
+	color: var(--color-bg);
+}
+
+/* Hover effect */
+.project:hover h3,
+.project:hover h2 {
+	color: var(--color-accent);
+	transition: color 0.3s ease;
+}
+
+.project:hover h2::after {
+	content: " ↗";
+	font-weight: 400;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+	.project {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.3rem;
+	}
+
+	.project h2 {
+		text-align: left;
+	}
+}
